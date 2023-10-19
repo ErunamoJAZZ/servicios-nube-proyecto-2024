@@ -7,7 +7,7 @@ const IFramePage: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
-    }, 5000);
+    }, 2000);
 
     return () => {
       clearInterval(interval);

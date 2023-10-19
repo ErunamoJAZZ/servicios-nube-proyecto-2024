@@ -1,7 +1,5 @@
 import { Box, Center, Heading } from '@chakra-ui/react';
 
-const companyName = process.env.COMPANY_NAME;
-
 export default function Page({
   params,
   searchParams,
@@ -9,6 +7,7 @@ export default function Page({
   params: { slug: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
+  const companyName = process.env.COMPANY_NAME;
   return (
     <Box height="100vh">
       <Center height="80%">

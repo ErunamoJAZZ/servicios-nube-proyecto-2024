@@ -1,6 +1,6 @@
-import './globals.css'
+import './globals.css';
 import { Providers } from "./providers";
-import Navbar from '../components/NavBar'
+import Navbar from '../components/NavBar';
 
 export default function RootLayout({
   children,
@@ -18,3 +18,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+// AAAAAAGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+// FUCKING CACHE BUGGGGGGGGGGG
+export const dynamic = 'force-dynamic';

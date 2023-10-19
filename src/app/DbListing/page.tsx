@@ -1,10 +1,8 @@
-
 import getDatabaseData from './db';
 import JsonTablePage from './jsonTable'
 
-export async function getData() {
+async function getData() {
   const data = await getDatabaseData();
-
   return data;
 }
 

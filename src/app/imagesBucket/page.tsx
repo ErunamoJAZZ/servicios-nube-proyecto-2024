@@ -1,7 +1,7 @@
 import { Box, Heading } from '@chakra-ui/react';
 import ImageGallery from './gallery';
 
-export async function loadImages() {
+async function loadImages() {
 
   const headers: HeadersInit = {
       'Content-Type': 'application/json',

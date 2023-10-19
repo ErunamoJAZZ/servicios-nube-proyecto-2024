@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export const response400 = () =>
+const response400 = () =>
   NextResponse.json({
     code: '400',
   });

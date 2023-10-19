@@ -33,7 +33,9 @@ const DestructionButtonPage: React.FC = () => {
             placeholder="Seconds"
             mr="2"
           />
-          <InputRightAddon children="seconds" />
+          <InputRightAddon>
+            Seconds
+          </InputRightAddon>
         </InputGroup>
         {isLoading ? (
           <Button

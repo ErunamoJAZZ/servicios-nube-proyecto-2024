@@ -21,7 +21,7 @@ const getDatabaseData = async () => {
   try {
     const pool = await getPool();
     const client = await pool.connect();
-    const result = await client.query('SELECT * FROM public.estudiante');
+    const result = await client.query('SELECT * FROM public.estudiante ORDER BY id DESC');
     client.release();
 
     return result.rows;

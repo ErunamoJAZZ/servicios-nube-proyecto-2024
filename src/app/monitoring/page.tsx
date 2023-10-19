@@ -3,12 +3,11 @@ import { useState, useEffect } from 'react';
 
 const IFramePage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
-  const iframeUrl = process.env.LOAD_BALANCER_IFRAME_URL || '/api/test';
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
-    }, 2000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -16,21 +15,25 @@ const IFramePage: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <div style={{
-        textAlign: 'center',
-        marginTop: '20px',
-      }}>
+    <section>
+      <div
+        style={{
+          textAlign: 'center',
+          marginTop: '20px',
+        }}
+        suppressHydrationWarning
+      >
         Última actualización: {lastUpdated.toLocaleTimeString()}
       </div>
       <iframe
-        src={iframeUrl}
+        src="/proxy"
         key={lastUpdated.valueOf()}
         width="100%"
         height="500px"
         title="iframe"
+        suppressHydrationWarning
       ></iframe>
-    </div>
+    </section>
   );
 };
 

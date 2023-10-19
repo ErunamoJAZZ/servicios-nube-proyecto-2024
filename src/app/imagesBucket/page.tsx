@@ -11,6 +11,7 @@ export async function loadImages() {
   const res = await fetch(process.env.AWS_S3_LAMBDA_URL || '', {
     method: 'GET',
     headers,
+    cache: 'no-store',
   });
   const { images }: { images: string[]} = await res.json();
 

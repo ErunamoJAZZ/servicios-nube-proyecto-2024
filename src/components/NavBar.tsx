@@ -2,23 +2,22 @@
 import { Box, Flex, Link, Text, IconButton, Stack, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ReactNode } from 'react';
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
 
 
 
 
 const NavItem: React.FC<{ href: string; children: ReactNode; }> = ({ href, children }) => (
   <Box as="li" listStyleType="none" marginRight="4">
-    <NextLink href={href} passHref>
-      <Link
-        fontSize="lg"
-        fontWeight="bold"
-        color="blue.500"
-        _hover={{ textDecoration: 'underline' }}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      href={href}
+      fontSize="lg"
+      fontWeight="bold"
+      color="blue.500"
+      _hover={{ textDecoration: 'underline' }}
+    >
+      {children}
+    </Link>
   </Box>
 );
 

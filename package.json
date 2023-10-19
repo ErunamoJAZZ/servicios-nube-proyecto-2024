@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "rm -r .next && next build && zip -r \"../nube_$(date +\"%Y-%m-%d_%T\").zip\" .next package.json package-lock.json",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start -p $PORT"

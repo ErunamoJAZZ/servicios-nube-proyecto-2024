@@ -7,7 +7,7 @@ de este proyecto.
 
 ## Dependencias
 
-Este proyecto requiere **[Node.js versión 18 (la LTS actual)](https://nodejs.org/en/download)**.
+Este proyecto requiere **[Node.js versión 18 (la LTS actual)](https://nodejs.org/en/download)**. Además es necesario correr los comandos en un ambiente Linux, por ejemplo pueden usar [Windows Subsystem for Linux (WSL)](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10) en caso tal use Windows como sistema operativo.
 
 Dentro de la carpeta del proyecto (local) correr el siguiente comando:
 
@@ -15,7 +15,7 @@ Dentro de la carpeta del proyecto (local) correr el siguiente comando:
 npm install
 ```
 
-Para realizar pruebas de estrés, es necesario que el **servidor** en el que se ejecute disponga del comando `stress`. Dependiendo del sistema operativo, puede instalarse con alguno de los siguientes comandos:
+Para realizar pruebas de estrés, es necesario que en el **servidor** en el que se ejecute disponga del comando `stress`. Dependiendo del sistema operativo, puede instalarse con alguno de los siguientes comandos:
 
 ```bash
 sudo apt install stress -y
@@ -45,33 +45,25 @@ Además, hay una pestaña adicional denominada "Bonus", que implica el uso de un
 
 ## Despliegue
 
-Puede implementar este proyecto directamente en EC2 o utilizar Elastic Beanstalk. Se proporciona un archivo de ejemplo (.env) con las variables de entorno necesarias, pero se espera que, al realizar la implementación, se coloquen estas variables en las ubicaciones adecuadas, siguiendo las mejores prácticas para este tipo de aplicaciones.
+Puede implementar este proyecto directamente en EC2 o utilizar Elastic Beanstalk. Se proporciona un archivo de ejemplo (.env.example) con las variables de entorno necesarias, pero se espera que, al realizar la implementación, se coloquen estas variables en las ubicaciones adecuadas, siguiendo las mejores prácticas para este tipo de aplicaciones.
+
+Si desea desplegar estas variables de entornos de forma local, necesita crear un archivo `.env ` y agregar el contenido del archivo de ejemplo reemplazando los datos de las configuraciones reales.
 
 Para preparar el proyecto para el despliegue deben seguir los siguientes pasos:
 
-### Windows
-
 ```bash
-npm run build-win
-```
-
-Este comando nos creará una carpeta llamada nube_2023, la cual se debe comprimir su contenido (.next, package.json, package-lock.json) en un archivo zip para subirla a la nube.
-
-**Recomendación:** Cada vez que se corra el comando build, es muy importante que eliminen la carpeta nube_2023, para que no haya ningún inconveniente al momento de preparar el proyecto.
-
-### Linux
-
-```bash
-npm run build-nix
+npm run build
 ```
 
 Este comando nos creará el zip dentro de la carpeta, listo para subir a la nube.
+
+**Recomendación:** Cada vez que corra el anterior comando, asegurse de eliminar la carpeta .next, para que los cambios puedan surtir efectos.
 
 Consulte la [documentación de implementación de Next.js](https://nextjs.org/docs/deployment) para obtener más detalles.
 
 ## Bases de datos
 
-En la carpeta database, se encuentra un archivo sql, el cual tiene el script para crear la tabla y registrar los datos dummy en la bases de datos.
+En la carpeta database, se encuentra un [archivo sql](https://github.com/ErunamoJAZZ/servicios-nube-proyecto-2023/blob/main/database/ddl-estudiante.sql), el cual tiene el script para crear la tabla y registrar los datos dummy en la bases de datos.
 
 ## Imágenes del Bucket S3
 

@@ -13,6 +13,10 @@ async function loadImages() {
     headers,
     cache: 'no-store',
   });
+
+  console.log(JSON.stringify(headers));
+  console.log(JSON.stringify(res));
+
   const { images }: { images: string[]} = await res.json();
 
   return { images };
@@ -23,12 +27,17 @@ export const fetchCache = 'force-no-store'
 
 const YourImagePage: React.FC = async () => {
   const {images} = await loadImages();
+  console.log('imagesnes:', images);
   return (
     <Box>
       <Heading as="h1" size="xl" textAlign="center" my={4}>
         Galería de Imágenes
       </Heading>
-      <ImageGallery images={images} />
+      {images ? (
+        <ImageGallery images={images} />
+      ):(
+        <Heading>No images found :(</Heading>
+      )}
     </Box>
   );
 };

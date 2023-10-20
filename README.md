@@ -1,8 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto de Servicios en la nube 2023
 
-## Getting Started
+Este proyecto busca evaluar las capacidades de los estudiantes del curso de _Servicios en la nube_
+de a Universidad Nacional de Colombia sede Medellín, al implementar la infraestructura necesaria
+en la nube de Amazon Web Service (AWS), para correr de forma exitosa cada una de las secciones
+de este proyecto.
 
-First, run the development server:
+## Dependencias
+
+Este proyecto requiere **Node.js versión 20 (la LTS actual)**. Para realizar pruebas de estrés, es necesario que el servidor en el que se ejecute disponga del comando `stress`. Dependiendo del sistema operativo, puede instalarse con alguno de los siguientes comandos:
+
+```bash
+sudo apt install stress -y
+sudo dnf install stress -y
+sudo yum install stress -y
+sudo pacman install stress -y
+```
+
+El proyecto está desarrollado utilizando [Next.js](https://nextjs.org/).
+Puede ejecutar el proyecto en entorno local utilizando cualquiera de estos comandos:
 
 ```bash
 npm run dev
@@ -14,23 +29,19 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acceda a [http://localhost:3000](http://localhost:3000) para visualizar los resultados en el entorno local.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+El proyecto utiliza una base de datos PostgreSQL, un Bucket de S3, y un par de servicios Lambda. Puede encontrar ejemplos en la carpeta "lambda". No es obligatorio utilizar estos ejemplos, pero pueden servir como referencia.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Además, hay una pestaña adicional denominada "Bonus", que implica el uso de una URL que apunta a un balanceador de carga. Esta página se carga a través de un proxy interno y se muestra en un iFrame. La implementación y el despliegue de esta página de bonificación son responsabilidad de cada grupo y se evaluarán en función de la creatividad y los conceptos aplicados en la implementación.
 
-## Learn More
+## Despliegue
 
-To learn more about Next.js, take a look at the following resources:
+Puede implementar este proyecto directamente en EC2 o utilizar Elastic Beanstalk. Se proporciona un archivo de ejemplo con las variables de entorno necesarias, pero se espera que, al realizar la implementación, se coloquen estas variables en las ubicaciones adecuadas, siguiendo las mejores prácticas para este tipo de aplicaciones.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Consulte la [documentación de implementación de Next.js](https://nextjs.org/docs/deployment) para obtener más detalles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Errores en este proyecto
+Si detecta algún error en este proyecto, le instamos a informarlo a través de los canales oficiales del curso. También estamos abiertos a recibir Pull Requests, aunque no se garantiza su aceptación.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

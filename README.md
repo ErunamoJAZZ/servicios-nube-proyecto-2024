@@ -1,4 +1,4 @@
-# Proyecto de Servicios en la nube 2023
+# Proyecto de Servicios en la nube 2024
 
 Este proyecto busca evaluar las capacidades de los estudiantes del curso de _Servicios en la nube_
 de a Universidad Nacional de Colombia sede Medellín, al implementar la infraestructura necesaria
@@ -63,7 +63,7 @@ Consulte la [documentación de implementación de Next.js](https://nextjs.org/do
 
 ## Bases de datos
 
-En la carpeta database, se encuentra un [archivo sql](https://github.com/ErunamoJAZZ/servicios-nube-proyecto-2023/blob/main/database/ddl-estudiante.sql), el cual tiene el script para crear la tabla y registrar los datos dummy en la bases de datos.
+En la carpeta database, se encuentra un [archivo sql](https://github.com/ErunamoJAZZ/servicios-nube-proyecto-2024/blob/main/database/ddl-estudiante.sql), el cual tiene el script para crear la tabla y registrar los datos dummy en la bases de datos.
 
 ## Imágenes del Bucket S3
 

@@ -1,3 +1,4 @@
+
 # Proyecto de Servicios en la nube 2024
 
 Este proyecto busca evaluar las capacidades de los estudiantes del curso de _Servicios en la nube_
@@ -19,8 +20,11 @@ Para realizar pruebas de estrés, es necesario que en el **servidor** en el que 
 
 ```bash
 sudo apt install stress -y
+# Fedora
 sudo dnf install stress -y
+# Red Hat
 sudo yum install stress -y
+# Arch derivates
 sudo pacman install stress -y
 ```
 
@@ -41,7 +45,7 @@ Acceda a [http://localhost:3000](http://localhost:3000) para visualizar los resu
 
 El proyecto utiliza una base de datos PostgreSQL, un Bucket de S3, y un par de servicios Lambda. Puede encontrar ejemplos en la carpeta "lambda". No es obligatorio utilizar estos ejemplos, pero pueden servir como referencia.
 
-Además, hay una pestaña adicional denominada "Bonus", que implica el uso de una URL que apunta a un balanceador de carga. Esta página se carga a través de un proxy interno y se muestra en un iFrame. La implementación y el despliegue de esta página de bonificación son responsabilidad de cada grupo y se evaluarán en función de la creatividad y los conceptos aplicados en la implementación.
+Además, se debe recordar del requerimiento denominado "Balanceador de carga ", que implica el uso de una URL que apunta a un balanceador de carga. Esta página se carga a través de un proxy interno y se muestra en un iFrame. 
 
 ## Despliegue
 

@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         <NavItem href="/imagesBucket">Imágenes</NavItem>
         <NavItem href="/lambda">Lambda</NavItem>
         <NavItem href="/loadingStress">Stress</NavItem>
-        <NavItem href="/monitoring">Bonus</NavItem>
+        <NavItem href="/monitoring">Load Balancer</NavItem>
       </Stack>
     </Flex>
   );

@@ -8,7 +8,7 @@ de este proyecto.
 
 ## Dependencias
 
-Este proyecto requiere **[Node.js versión 18 (la LTS actual)](https://nodejs.org/en/download)**. Además es necesario correr los comandos en un ambiente Linux, por ejemplo pueden usar [Windows Subsystem for Linux (WSL)](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10) en caso tal use Windows como sistema operativo.
+Este proyecto requiere **[Node.js versión 20 (la LTS actual)](https://nodejs.org/en/download)**. Además es necesario correr los comandos en un ambiente Linux, por ejemplo pueden usar [Windows Subsystem for Linux (WSL)](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10) en caso tal use Windows como sistema operativo.
 
 Dentro de la carpeta del proyecto (local) correr el siguiente comando:
 
@@ -25,7 +25,7 @@ sudo dnf install stress -y
 # Red Hat
 sudo yum install stress -y
 # Arch derivates
-sudo pacman install stress -y
+sudo pacman -S stress 
 ```
 
 El proyecto está desarrollado utilizando [Next.js](https://nextjs.org/).

@@ -10,12 +10,12 @@ export default function Home() {
       <Container>
         <p>
           Esta página de ejemplo permitirá evaluar lo aprendido
-          en el curso de Servicios en la nube, 2023-2S.
+          en el curso de Servicios en la nube, 2024-1.
         </p>
         <p>
           El objetivo es hacer que cada una de las pestañas de
           esta página, funcione correctamente. Para ello será necesario
-          el levatar los servicios adecuados según el caso.
+          el levantar los servicios adecuados según el caso.
         </p>
         <p>
           Hay total libertad en la forma de hacerlo, la única limitante es

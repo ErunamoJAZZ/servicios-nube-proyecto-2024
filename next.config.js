@@ -1,5 +1,5 @@
+const LOAD_BALANCER_IFRAME_URL = process.env.LOAD_BALANCER_IFRAME_URL || 'https://www.google.com';
 
-const LOAD_BALANCER_IFRAME_URL = process.env.LOAD_BALANCER_IFRAME_URL
 
 /** @type {import('next').NextConfig} */
 
